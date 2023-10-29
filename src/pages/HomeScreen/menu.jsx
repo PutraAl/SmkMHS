@@ -36,7 +36,7 @@ const Menu = ({navigation}) => {
       </TouchableOpacity> 
       </View>
     </View>
-    <Text style={{fontSize: 15, fontWeight: 400, color: 'black', marginTop: 5, marginLeft: 20}}>Menu Minuman</Text>
+    <Text style={{fontSize: 15, fontWeight: 400, color: 'black', marginTop: 56, marginLeft: 20}}>Menu Minuman</Text>
 
     <View style={styles.Makanan}>
       <View>
@@ -84,6 +84,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
     fontWeight: 'bold',
     color: 'black',
+    marginTop: 7
 
   },
   

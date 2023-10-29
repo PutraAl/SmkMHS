@@ -1,9 +1,13 @@
-import {StyleSheet, Text, View, TouchableOpacity, Image, ScrollView} from 'react-native';
-import React from 'react';
+import { StyleSheet, Text, View, ScrollView, TouchableOpacity, Image, TextInput} from 'react-native'
+import React from 'react'
 
-const Detail = () => {
+const TextInputExample = () => {
+    const [text, onChangeText] = React.useState('Useless Text');
+    const [number, onChangeNumber] = React.useState('');
+  
+const DetailAyamPenyet = () => {
   return (
-    <ScrollView>
+<ScrollView>
       <View style={{flexDirection: 'row', alignContent: 'space-between'}}>
         <TouchableOpacity
           style={{
@@ -38,7 +42,7 @@ const Detail = () => {
         </Text>
       </View>
       <Image
-        source={require('../../assets/images/ayampenyet.jpg')}
+        source={require('../../assets/images/esjeruk.png')}
         style={{
           width: 283,
           height: 274,
@@ -60,26 +64,26 @@ const Detail = () => {
             fontWeight: 'bold',
             color: 'black',
           }}>
-          Ayam Penyet
+          Es Jeruk
         </Text>
         <Text
           style={{
             fontWeight: 'semibold',
             color: 'darkred',
           }}>
-          Rp. 20.000
+          Rp. 10.000
         </Text>
       </View>
       <Text style={{
             width: 283,
-            height: 85,
+            height: 65,
             marginLeft: 73,
             marginTop: 19,
             color: '#FF0000',
             fontWeight: 300,
             fontSize: 12
       }}>
-      Ayam penyet merupakan salah satu olahan ayam goreng yang disukai oleh pecinta pedas. Asin gurihnya ayam goreng dipenyet atau ditekan dengan ulegan dengan sambal yang super pedas. Nikmatnya bikin nagih!
+      Es jeruk adalah minuman yang terbuat dari buah jeruk. menyehatkan tubuh. tentunya memiliki manfaat yang sangat baik bagi kesehatan. memiliki rasa yang lezat.
       </Text>
       <Text style={{
         marginTop: 39,
@@ -98,12 +102,17 @@ const Detail = () => {
         marginLeft : 73,
         borderRadius: 15,
       }}>
-        <Text style={{
-            marginTop: 10.5,
-            marginLeft: 18
-        }}>
+          <SafeAreaView>
+       <TextInput
+        style={styles.input}
+        onChangeText={onChangeNumber}
+        value={number}
+        placeholder="useless placeholder"
+        keyboardType="numeric"
+      />
+      </SafeAreaView>
             Max. 10 Pemesanan
-        </Text>
+        
       </View>
       <View style={{
         width: 322,
@@ -123,9 +132,9 @@ const Detail = () => {
         </Text>
       </View>
     </ScrollView>
-  );
-};
+  )
+}
 
-export default Detail;
+export default DetailAyamPenyet
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({})
