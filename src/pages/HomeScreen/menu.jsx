@@ -29,7 +29,7 @@ const Menu = ({navigation}) => {
       <Image source={require('../../assets/images/mie_ayam.png')} resizeMode='cover' style={styles.listmakanan}/>
       <Text style={styles.textmakanan}>Mie Ayam</Text>
       <Text style={styles.textharga}>Rp. 15.000</Text>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate('Mieayam')}  >
         <View style={styles.tombol}>
           <Text style={styles.textorder}>Order</Text>
         </View>
@@ -43,7 +43,7 @@ const Menu = ({navigation}) => {
       <Image source={require('../../assets/images/teh.jpg')} resizeMode='cover' style={styles.listmakanan}/>
       <Text style={styles.textmakanan}>Teh Obenk</Text>
       <Text style={styles.textharga}>Rp. 8.000</Text>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate('Tehobeng')} >
         <View style={styles.tombol}>
           <Text style={styles.textorder}>Order</Text>
         </View>

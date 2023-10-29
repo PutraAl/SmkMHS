@@ -1,18 +1,19 @@
-import {StyleSheet, View, ScrollView, TouchableOpacity, Image, TextInput, SafeAreaView, Text} from 'react-native'
+import { StyleSheet, View, ScrollView, TouchableOpacity, Image, TextInput, SafeAreaView, Text} from 'react-native'
 import React, { useState } from 'react';
 
-const DetailAyamPenyet= ({navigation}) => {
-  const [inputText, setInputText] = useState('');
 
-  handleSubmit = () => {
-    if (inputText >0 && inputText <11) {
-      // Lakukan aksi yang diinginkan jika kondisi terpenuhi
-      navigation.navigate('Success');
-    } else {
-      // Tampilkan pesan kesalahan jika kondisi tidak terpenuhi
-      navigation.navigate('Fail');
+const Tehobeng = ({navigation}) => {
+    const [inputText, setInputText] = useState('');
+
+    handleSubmit = () => {
+      if (inputText >0 && inputText <11) {
+        // Lakukan aksi yang diinginkan jika kondisi terpenuhi
+        navigation.navigate('Success');
+      } else {
+        // Tampilkan pesan kesalahan jika kondisi tidak terpenuhi
+        navigation.navigate('Fail');
+      }
     }
-  }
 {
   return (
 <ScrollView>
@@ -50,7 +51,7 @@ const DetailAyamPenyet= ({navigation}) => {
         </Text>
       </View>
       <Image
-        source={require('../../assets/images/ayampenyet.jpg')}
+        source={require('../../assets/images/teh.jpg')}
         style={{
           width: 283,
           height: 274,
@@ -72,14 +73,14 @@ const DetailAyamPenyet= ({navigation}) => {
             fontWeight: 'bold',
             color: 'black',
           }}>
-          Ayam Penyet
+         Teh Obenk
         </Text>
         <Text
           style={{
             fontWeight: 'semibold',
             color: 'darkred',
           }}>
-          Rp. 20.000
+          Rp. 8.000
         </Text>
       </View>
       <Text style={{
@@ -91,7 +92,7 @@ const DetailAyamPenyet= ({navigation}) => {
             fontWeight: 300,
             fontSize: 12
       }}>
-     Ayam Penyet dengan sajian lengkap seperti nasi, ayam, tahu, tempe, lalapan, serta sambal sepuasnya
+     Teh dengan perpaduan es batu yang segar menghilangkan haus dahaga
       </Text>
       <Text style={{
         marginTop: 39,
@@ -111,12 +112,8 @@ const DetailAyamPenyet= ({navigation}) => {
         borderRadius: 15,
       }}>
         <SafeAreaView>
-        <TextInput placeholder='Max Pemesanan 10 Pcs!'  maxLength={2} keyboardType='numeric' 
-       onChangeText={(text) => setInputText(text)}
-       value={inputText}
-        >
-
-        </TextInput>
+        <TextInput placeholder='Max Pemesanan 10 Pcs!'  maxLength={2} keyboardType='numeric' textContentType='telephoneNumber' onChangeText={(text) => setInputText(text)}
+       value={inputText}></TextInput>
 
         </SafeAreaView>
        
@@ -148,6 +145,6 @@ const DetailAyamPenyet= ({navigation}) => {
   )
 }
 }
-export default DetailAyamPenyet
+export default Tehobeng
 
 const styles = StyleSheet.create({})
